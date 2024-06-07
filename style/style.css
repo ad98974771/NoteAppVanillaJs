@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+.body{
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.page-container{
+  background-image: url('/img/richard-horvath-cPccYbPrF-A-unsplash.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.page-container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.notes-app-window-container{
+display: flex;
+flex-direction: column;
+width: 60rem;
+height: 42.7rem;
+border-style: solid;
+border-width: 0.15rem;
+border-radius: 0.75rem;
+border-color: #515158;
+overflow: hidden;
+}
+
+.header-menu{
+  display: flex;
+  flex-direction: row;
+  height: 2.5rem;
+  border-radius: 0.66rem 0.66rem 0rem 0rem;
+  background-color: #3d463e;
+}
+
+.top-side-bar{
+  display: flex;
+  flex-direction: row;
+  margin: 0.3rem 0rem 0.3rem 0rem;
+  gap: 1.5rem;
+  width: 16rem;
+  border-right-style: solid;
+  border-right-width: 0.12rem;
+  border-right-color: #696969;
+  border-radius: 0.75rem 0rem 0rem 0rem;
+  box-sizing: border-box;
+}
+
+/* FUNC DIV STYLE */
+.func-btn{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-width: 0.12rem;
+  border-radius: 0.75rem 0rem 0rem 0rem;
+  gap: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.red-btn{
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 50%;
+  background-color: #A9A9A9;
+}
+.red-btn:hover{
+  cursor: no-drop;
+  background-color: #ff5f58;
+}
+
+.yellow-btn{
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 50%;
+  background-color: #A9A9A9;
+}
+.yellow-btn:hover{
+  cursor: no-drop;
+  background-color: #febb2c;
+}
+
+.green-btn{
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 50%;
+  background-color: #A9A9A9;
+}
+.green-btn:hover{
+  cursor: no-drop;
+  background-color: #2bc740;
+}
+
+/* ICON LIST TOP HEADER */
+.icon-list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  gap: 0.6rem;
+}
+.first-icon{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: end;
+  height: 100%;
+  padding: 0rem 0.4rem 0rem 0.4rem;
+  border-radius: 0.25rem;
+  background-color: #6E6E6E;
+  cursor: no-drop;
+}
+.second-icon{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  height: 100%;
+  padding: 0rem 0.4rem 0rem 0.4rem;
+  cursor: no-drop;
+}
+
+.icon-list:hover{
+  background-color: #595959;
+}
+
+/* SEARCH FIELD */
+.top-notes-window{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  flex-direction: row;
+  padding: 0rem 0.2rem 0rem 0.5rem;
+  justify-content: space-between;
+  margin: 0.3rem 0.3rem 0.3rem 0rem;
+}
+.search-field {
+  background-image: url('/img/icons8-search-60.png');
+  background-position: 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  padding: 0rem 0rem 0rem 2rem;
+  border-style: solid;
+  border-width: 0.12rem;
+  border-radius: 0.4rem;
+  background-color: #3d463e;
+  height: 1.8rem;
+  display: flex;
+  align-items: center;
+}
+.search-field:hover{
+  background-color: #595959;
+}
+.search-field::placeholder{
+  color: white;
+}
+
+/* notes-app-window */
+.notes-app-window{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+/* SIDE BAR */
+.side-bar-notes-window{
+display: flex;
+flex-direction: column;
+width: 16rem;
+box-sizing: border-box; 
+height: 100%;
+background: rgba( 0, 0, 0, 0.15 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
+}
+
+/* NOTES WINDOW */
+.notes-window{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  height: 100%;
+  background: rgba( 0, 0, 0, 0.35 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
+}
+
+/* WELCOME SCREEN */
+.first-screen {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.first-screen-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.big-header-text {
+  margin: 0;
+  font-family: 'Loto', sans-serif;
+  color: white;
+}
+
+.header-p {
+  text-align: center;
+  font-family: 'Loto', sans-serif;
+  color: #b4b2b1;
+}
+
+.start-typing {
+font-family: "Loto", sans-serif;
+width: 16rem;
+text-transform: uppercase;
+cursor: pointer;
+padding: 9px 15px;
+color: #fff;
+text-align: center;
+background-color: rgba(255,255,255,.1);
+border: 1px #000;
+border-radius: .3rem;
+font-size: .8rem;
+}
+
+.start-typing:hover {
+  background-color: rgba(255,255,255,.2);
+}
+
+.header-p span {
+  color: #febb2c;
+}
+
+/* TYPING SCREEN */
+.typing-screen{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding-left: 0.75rem;
+}
+
+.datetime{
+  padding-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.textarea{
+  cursor: text;
+  color: #b4b2b1;
+  margin: 0.5rem;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border-style: none;
+}
+
+textarea:focus, textarea:active {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: none;
+}
+
+/* NEW NOTE PREVIEW */
+.new-note{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 1rem;
+gap: 0.75rem;
+color: white;
+border-style: solid;
+border-width: 0rem 0rem 0.12rem 0rem;
+border-color: #ffffff1a;
+}
+
+.new-note-hader{
+  font-size: large;
+  font-family: 'Lato', sans-serif;
+  font-style: 700;
+}
+
+.new-note-wrapper{
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+}
+
+.new-note-date{
+  font-family: 'Lato', sans-serif;
+  color: #febb2c;
+  font-size: small;
+}
+
+.new-note-description{
+  font-family: 'Lato', sans-serif;
+  color: #b4b2b1;
+  font-size: small;
+}
+
+.new-note:hover{
+  cursor: pointer;
+  background-color: #ffffff0d;
+}
+
+.new-notes-icon{
+  padding: 0.4rem;
+}
+
+.new-notes-icon:hover{
+  border-radius: 0.2rem;
+  background-color: #595959;
+  cursor: pointer;
+}
+
+.notes-counter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  height: 4rem;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  background-color: #ffffff0d;
+
+}
+/* support class */
+.hidden{
+  display: none;
+}

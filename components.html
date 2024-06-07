@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NotesApp | Vanilla JS</title>
+<link rel="stylesheet" href="/style/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="/script.js"></script>
+</head>
+<body>
+  <div class="page-container">
+    <div class="notes-app-window-container">
+      <div class="header-menu">
+        <div class="top-side-bar">
+          <div class="func-btn">
+            <div class="red-btn"></div>
+            <div class="yellow-btn"></div>
+            <div class="green-btn"></div>
+          </div>
+          <div class="icon-list">
+            <div class="first-icon"><img src="/img/icons8-list-50.png" alt="" width="18px" height="18px"></div>
+            <div class="second-icon"><img src="/img/icons8-grid-50.png" alt="" width="18px" height="18px"></div>
+          </div>
+        </div>
+        <div class="top-notes-window"><input class="lato-light search-field" type="text" placeholder="Search"></div>
+      </div>
+      <div class="notes-app-window">
+        <div class="side-bar-notes-window">
+          <!-- new note container -->
+          <div class="new-note">
+            <div class="new-note-hader">New Note</div>
+            <div class="new-note-wrapper">            
+              <div class="new-note-date">16:56</div>
+              <div class="new-note-description"> No additional info...</div></div>
+          </div>
+          <!-- dynamic notes counter -->
+          <div class="notes-counter">1 Notes</div>
+        </div>
+        <div class="notes-window">
+          <!-- create new note -->
+            <div class="typing-screen">
+              <div class="datetime lato-light">5 June 2024 at 16:36</div>
+              <textarea class="textarea lato-light" name="" id="textarea" tabindex="0"></textarea>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
