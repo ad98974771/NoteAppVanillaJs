@@ -197,8 +197,10 @@ height: 100%;
 background: rgba( 0, 0, 0, 0.15 );
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 20px );
--webkit-backdrop-filter: blur( 20px );
+/* -webkit-backdrop-filter: blur( 20px ); */
 }
+
+
 
 /* NOTES WINDOW */
 .notes-window{
@@ -349,15 +351,19 @@ border-color: #ffffff1a;
 
 .notes-counter{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-top: auto;
+  gap: 0.25rem;
   height: 4rem;
-  font-family: 'Lato', sans-serif;
   color: white;
+  font-family: 'Lato', sans-serif;
   background-color: #ffffff0d;
+}
 
+.notes-counter span{
+  color: #febb2c !important;
 }
 /* support class */
 .hidden{

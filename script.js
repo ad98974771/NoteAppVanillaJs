@@ -99,14 +99,12 @@ function saveText(event) {
 }
 
 function createNewNote(){
-// Сохранить id предыдущей заметки в массив и добавить в элемент new-notes
   let id = Date.now();
   let lastObj = arr.at(-1);
   lastObj.id = id;
   let newNotes =  document.querySelector('.new-note')
   newNotes.id = id;
 
-  // Получить список всех див внутри окна редактора и применить класс remove
   let notesWindow = document.querySelector('.notes-window');
   let allElements = notesWindow.querySelectorAll('*');
   allElements.forEach((item) => item.remove())
@@ -116,6 +114,7 @@ function createNewNote(){
 
   let newNoteTab = document.querySelector('.new-note');
   newNoteTab.addEventListener('click', renderNotesContainer);
+  ShowHideCounter();
 }
 
 function renderNotesContainer(event){
@@ -124,7 +123,7 @@ function renderNotesContainer(event){
 
   let selectedObj = arr.find((item) => item.id === id)
 
-  let textAreaDiv = `<div class="typing-screen"><div class="datetime lato-light">Write func to get time</div><textarea class="textarea lato-light" name="" id="textarea" tabindex="0">${selectedObj.fullText}</textarea></div>`;
+  let textAreaDiv = `<div class="typing-screen"><div class="datetime lato-light">${dateTimeForNotes()}</div><textarea class="textarea lato-light" name="" id="textarea" tabindex="0">${selectedObj.fullText}</textarea></div>`;
   let el = document.querySelector('.notes-window');
   el.innerHTML = textAreaDiv;
   let justCreatedEl = document.getElementById('textarea');
@@ -148,17 +147,36 @@ function renderNotesContainer(event){
     description.textContent = textForDescriptionStr;
 
     deleteNote(selectedObj, parentNode)
+    ShowHideCounter(arr);
   });
 
 }
 
 function deleteNote(obj, area){
+  let id = Number(obj.id)
+
+  
   if (obj.fullText.trim() === ''){
-    console.log(area)
+    arr = arr.filter((item) => item.id !== id)
     area.remove();
+    console.log('deleteNote')
   }
 
-  let id = Number(obj.id)
-  arr = arr.filter((item) => item.id !== id)
-  console.log(arr)
+  ShowHideCounter(arr);
+}
+
+function ShowHideCounter() {
+  let arrLength = arr.length;
+
+  let parentNode = document.querySelector('.side-bar-notes-window');
+
+  let notesCounterElement = parentNode.querySelector('.notes-counter');
+  let notesCounterDiv = `<div class="notes-counter"><span>${arrLength}</span> notes</div>`;
+
+  if (notesCounterElement) {
+    let span = notesCounterElement.querySelector('span');
+    if (span) {span.textContent = arrLength;}
+  } else {
+    parentNode.insertAdjacentHTML('beforeend', notesCounterDiv);
+  }
 }
